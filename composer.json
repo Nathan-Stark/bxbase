@@ -1,9 +1,10 @@
 {
   "name": "Nathan-Stark/bxbase",
   "type": "project",
-  "description": "",
+  "description": "Composer package by Nathan Stark",
+  "license": "MIT",
   "require": {
-    "php": "^5.3.3 || ^7.0"
+    "php": ">=5.3.3"
   },
   "repositories": [
     {
