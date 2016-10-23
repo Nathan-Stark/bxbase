@@ -10,6 +10,8 @@ web/local/include
 web/sitemap*
 web/bitrixsetup.php
 
+/vendor
+
 frontend/node_modules
 frontend/bower_components
 frontend/build
