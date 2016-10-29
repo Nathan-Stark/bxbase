@@ -3,9 +3,6 @@
   "type": "project",
   "description": "Composer package by Nathan Stark",
   "license": "MIT",
-  "require": {
-    "php": ">=5.3.3"
-  },
   "repositories": [
     {
       "type": "git",
