@@ -1,5 +1,4 @@
-## changelog
-
+# changelog   
 ### 0.1.0 ( 22 Января 2017 )   
    - add: Добавлена папка **/web/assets/css/**
    - fix: Исправлено имя папки **assets**
