@@ -8,5 +8,13 @@
       "type": "git",
       "url": "https://github.com/Nathan-Stark/bxbase"
     }
-  ]
+  ],
+  "require": {},
+  "extra": {
+    "installer-paths": {
+      "./web/local/modules/{$name}/": ["type:bitrix-module"],
+      "./web/local/components/slabs/{$name}": ["vendor:starlabs"],
+      "./web/local/components/{$name}": ["type:bitrix-component"]
+    }
+  }
 }
