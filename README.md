@@ -11,7 +11,7 @@
    - remove: Удалил папку **frontend/less/**
 
 ## Расширенные пути composer для компонентов и модулей 1C-bitrix
-Все сотороние компоненты и модули устанавливаются на прямую в папки local/components/ и local/modules/
+Все сотороние компоненты и модули устанавливаются на прямую в папки local/components/ и local/modules/   
 Мои компоненты устаналиваются в local/components/slabs/
 
 ## Файловая структура проекта 1C-bitrix
