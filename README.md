@@ -1,4 +1,8 @@
-# changelog   
+# changelog
+### 0.1.1 ( 04 Февраля 2017 )
+   - add: Добавлена среда разработки [vagr](https://github.com/Nathan-Stark/vagr)
+   - fix: Добавлен в зависемости пакет **composer/installers**
+
 ### 0.1.0 ( 22 Января 2017 )   
    - add: Добавлена папка **/web/assets/css/**
    - fix: Исправлено имя папки **assets**
