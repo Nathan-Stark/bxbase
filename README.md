@@ -1,5 +1,5 @@
 # changelog
-### 0.1.1 ( 20 Марта 2017 )
+### 0.1.2 ( 20 Марта 2017 )
    - remove: vagrant удален, будет отдельной веткой.
    - add: Добавлен путь для устаеновки [slabs-ajaxform](https://github.com/Nathan-Stark/slabs-ajaxform)
    
