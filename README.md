@@ -1,7 +1,7 @@
 # changelog
 ### 0.1.2 ( 20 Марта 2017 )
    - remove: vagrant удален, будет отдельной веткой.
-   - add: Добавлен путь для устаеновки [slabs-ajaxform](https://github.com/Nathan-Stark/slabs-ajaxform)
+   - add: Добавлен путь для установки [slabs-ajaxform](https://github.com/Nathan-Stark/slabs-ajaxform)
    
 ### 0.1.1 ( 04 Февраля 2017 )
    - add: Добавлена среда разработки [vagr](https://github.com/Nathan-Stark/vagr)
