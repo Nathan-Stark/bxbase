@@ -1,4 +1,8 @@
 # changelog
+
+### 0.1.3 ( 23 Марта 2017 )
+   - add: Добавлен путь для установки [slabs-ajaxmore](https://github.com/Nathan-Stark/slabs-ajaxmore)
+
 ### 0.1.2 ( 20 Марта 2017 )
    - remove: vagrant удален, будет отдельной веткой.
    - add: Добавлен путь для установки [slabs-ajaxform](https://github.com/Nathan-Stark/slabs-ajaxform)

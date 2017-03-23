@@ -15,6 +15,7 @@
   "extra": {
     "installer-paths": {
       "./web/local/templates/main/components/bitrix/form.result.new/": ["starlabs/form.result.new"],
+      "./web/local/templates/main/components/bitrix/system.pagenavigation/": ["starlabs/system.pagenavigation"],
       "./web/local/modules/{$name}/": ["type:bitrix-module"],
       "./web/local/components/slabs/{$name}": ["vendor:starlabs"],
       "./web/local/components/{$name}": ["type:bitrix-component"]
