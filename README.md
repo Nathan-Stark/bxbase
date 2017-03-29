@@ -1,5 +1,8 @@
 # changelog
 
+### 0.1.4 ( 29 Марта 2017 )
+   - add: Добавлен путь для установки [slabs-ajaxregistration](https://github.com/Nathan-Stark/slabs-ajaxregistration)
+
 ### 0.1.3 ( 23 Марта 2017 )
    - add: Добавлен путь для установки [slabs-ajaxmore](https://github.com/Nathan-Stark/slabs-ajaxmore)
 
