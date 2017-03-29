@@ -2,7 +2,10 @@
 
 ### 0.1.4 ( 29 Марта 2017 )
    - add: Добавлен путь для установки [slabs-ajaxregistration](https://github.com/Nathan-Stark/slabs-ajaxregistration)
-
+   - add: Добавлен класс отладки "p"
+   - add: Добавлен "LOG_FILENAME" в "define.php"
+   - remove: Удалена функция отладки "p"
+   
 ### 0.1.3 ( 23 Марта 2017 )
    - add: Добавлен путь для установки [slabs-ajaxmore](https://github.com/Nathan-Stark/slabs-ajaxmore)
 
