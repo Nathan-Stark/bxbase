@@ -9,7 +9,7 @@ $arResult = array(
 );
 ?>
 <!DOCTYPE html>
-	<html>
+	<html lang="ru">
 	<head>
 		<?$APPLICATION->ShowHead();?>
 		<title><?$APPLICATION->ShowTitle();?></title>
