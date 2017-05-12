@@ -7,6 +7,17 @@ class p {
         $varDump,
         $onlyAdmin;
 
+    function __call($name, $arguments){
+        $nameDelimer = explode("_",$name);
+        if( $nameDelimer[1] ){
+            $name="";
+            foreach ($nameDelimer as $key=> $val)
+                $name .= $val.(count($nameDelimer)>$key+1?'-':"");
+        }
+        $this->css .= $name.":".$arguments[0].";";
+        return $this;
+    }
+
     static function init($val){
         $p = new self();
         $p->onlyAdmin = false;
@@ -41,7 +52,7 @@ class p {
         return $this;
     }
 
-    function _Die(){
+    function _die(){
         $this->die = true;
         return $this;
     }
@@ -52,29 +63,24 @@ class p {
     }
 
     function _toFile(){
-
-        if( !defined('LOG_FILENAME') )
-            define('LOG_FILENAME',$_SERVER["DOCUMENT_ROOT"]."/".".!__log");
-
         $this->toFile = true;
         return $this;
     }
 
-    function __destruct(){
-        $DeBug = "";
-
+    function __destruct()
+    {
         if( !$this->toFile ) {
             global $USER;
 
             if (($USER->IsAdmin() && $this->onlyAdmin) || !$this->onlyAdmin) {
-                $DeBug = (
+                $debug = (
                 $this->varDump === true
                     ? var_dump($this->data)
                     : $this->setStyle( print_r($this->data, true) )
                 );
             }
 
-            echo $DeBug;
+            echo $debug;
 
             if ($this->die) die();
         }else
