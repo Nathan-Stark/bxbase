@@ -14,7 +14,7 @@ sudo apt-get install -y mc
 
 # install apache 2.5 and php 5.5
 sudo apt-get install -y apache2
-sudo apt-get install -y php5 php5-gd php5-mcrypt php5-sqlite php5-json php5-curl
+sudo apt-get install -y php5 php5-gd php5-mcrypt php5-sqlite php5-json php5-curl php5-xdebug
 sudo php5enmod mcrypt
 
 # install mysql and give password to installer
@@ -31,6 +31,21 @@ sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $PASSWORD"
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"
 sudo apt-get -y install phpmyadmin
+
+XDEBUG=$(cat <<EOF
+xdebug.remote_host=192.168.1.100;ip адрес клиентской машины
+xdebug.remote_handler=dbgp
+xdebug.remote_log=/var/www/bitrix-base/xdebug.log
+xdebug.remote_enable=true
+xdebug.remote_port="9000"
+xdebug.profiler_enable=1
+xdebug.profiler_output_dir="/tmp/xdebug-someuser/"
+xdebug.profile_enable_trigger=1
+xdebug.trace_enable_trigger=1
+xdebug.idekey="PHPSTORM"
+EOF
+)
+echo "${XDEBUG}" > /etc/apache2/sites-available/000-default.conf
 
 # setup hosts file
 VHOST=$(cat <<EOF
