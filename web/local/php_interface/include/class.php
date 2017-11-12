@@ -1,11 +1,14 @@
 <?php
 class p {
-    private $die,
-        $data,
-        $color,
-        $toFile,
-        $varDump,
-        $onlyAdmin;
+    private $die
+    ,$data
+    ,$color
+    ,$toFile
+    ,$varDump
+    ,$onlyAdmin
+    ,$onlyAjax
+    ,$RestartBuffer
+    ;
 
     function __call($name, $arguments){
         $nameDelimer = explode("_",$name);
@@ -25,6 +28,8 @@ class p {
         $p->die = false;
         $p->varDump = false;
         $p->toFile = false;
+        $p->onlyAjax = false;
+
         return $p;
     }
 
@@ -32,6 +37,11 @@ class p {
         return '<pre style="border:1px solid ' . (empty($this->color) ? "red" : $this->color) . '">' . $val . "</pre>\n";
     }
 
+    function forAjax()
+    {
+        $this->onlyAjax = true;
+        return $this;
+    }
     function forAdmin(){
         $this->onlyAdmin = true;
         return $this;
@@ -52,7 +62,8 @@ class p {
         return $this;
     }
 
-    function _die(){
+    function _die($restart=false){
+        $this->RestartBuffer = $restart;
         $this->die = true;
         return $this;
     }
@@ -67,22 +78,34 @@ class p {
         return $this;
     }
 
+    function getRequest()
+    {
+        $this->data = \Bitrix\Main\Context::getCurrent()->getRequest()->toArray();
+        return $this;
+    }
+
     function __destruct()
     {
         if( !$this->toFile ) {
-            global $USER;
+            global $USER,$APPLICATION;
 
-            if (($USER->IsAdmin() && $this->onlyAdmin) || !$this->onlyAdmin) {
+            if (
+                ( ($USER->IsAdmin() && $this->onlyAdmin) || !$this->onlyAdmin ) &&
+                ( \Bitrix\Main\Context::getCurrent()->getRequest()->isAjaxRequest() === $this->onlyAjax)
+            ) {
                 $debug = (
                 $this->varDump === true
                     ? var_dump($this->data)
                     : $this->setStyle( print_r($this->data, true) )
                 );
+
+                if( $this->RestartBuffer === true )
+                    $APPLICATION->RestartBuffer();
+
+                echo $debug;
+                if ($this->die === true ) die();
             }
 
-            echo $debug;
-
-            if ($this->die) die();
         }else
             AddMessage2Log($this->data);
     }
