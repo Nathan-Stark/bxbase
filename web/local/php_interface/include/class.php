@@ -23,7 +23,7 @@ class p {
 
     static function init($val){
         $p = new self();
-        $p->onlyAdmin = false;
+        $p->onlyAdmin = true;
         $p->data = $val;
         $p->die = false;
         $p->varDump = false;
