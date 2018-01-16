@@ -1,7 +1,7 @@
 {
   "name": "starlabs/bxbase",
   "type": "project",
-  "description": "Composer package by Nathan Stark",
+  "description": "Базовая струтктура проекта для 1c-bitrix",
   "license": "MIT",
   "repositories": [
     {
