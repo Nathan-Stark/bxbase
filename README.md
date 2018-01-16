@@ -1,12 +1,16 @@
 # changelog
+### 0.3.1 ( 16 Января 2018)
+   - update: Значени **onlyAdmin** в отладочном классе по умолчанию **true**
+   - add: Автозагрузчик классов согласно стандарту PSR-4
+    
 ### 0.2.2 ( 12 Мая 2017)
-   - Для отладочного класса добавалена позможность прописывать стили в виде методов
-   - Папки ajax и include перенесены в папку шаблона.
-   - Удалены константы BASE_TEMPLATE_URL, BASE_INCLUDE_URL
+   - update: Для отладочного класса добавалена позможность прописывать стили в виде методов
+   - update: Папки ajax и include перенесены в папку шаблона.
+   - remove: Удалены константы BASE_TEMPLATE_URL, BASE_INCLUDE_URL
    
 ### 0.1.5 ( 11 Мая 2017)
-   - Мелкие правки
-   - Обновлен gitignore
+   - fix: Мелкие правки
+   - update: Обновлен gitignore
    
 ### 0.1.4 ( 29 Марта 2017 )
    - add: Добавлен путь для установки [slabs-ajaxregistration](https://github.com/Nathan-Stark/slabs-ajaxregistration)
