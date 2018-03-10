@@ -111,3 +111,29 @@ class p {
             AddMessage2Log($this->data);
     }
 }
+
+class setBitrixOptions
+{
+    public function __construct()
+    {
+        return $this;
+    }
+
+    /**
+     * Избавляемся от "Глисты"
+     */
+    static public function KillKenny()
+    {
+        CUserOptions::SetOption("main", "helper_hero_admin",['time'=>time()],false,1);
+    }
+
+    /**
+     * Не выводить блок информирующий об окончании лицензии
+     */
+    static public function admSupInf()
+    {
+        CUserOptions::SetOption("main", "admSupInf", ["showInformerDate"=> time()+86400], false, 1);
+    }
+}
+setBitrixOptions::KillKenny();
+setBitrixOptions::admSupInf();
