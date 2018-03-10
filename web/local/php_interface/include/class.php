@@ -1,6 +1,7 @@
 <?php
 class p {
     private $die
+    ,$css
     ,$data
     ,$color
     ,$toFile
@@ -34,7 +35,7 @@ class p {
     }
 
     protected function setStyle($val){
-        return '<pre style="border:1px solid ' . (empty($this->color) ? "red" : $this->color) . '">' . $val . "</pre>\n";
+        return '<pre style="border:1px solid ' . (empty($this->color) ? "red" : $this->color) .';'. $this->css.'">' . $val . "</pre>\n";
     }
 
     function forAjax()
