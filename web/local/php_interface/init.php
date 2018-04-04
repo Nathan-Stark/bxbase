@@ -11,6 +11,10 @@ spl_autoload_register(function ($class) {
     }
 });
 
+// Подключение библиотек composer'а
+if( file_exists($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php') )
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+
 require_once __DIR__.'/include/define.php';     # Константы
 require_once __DIR__.'/include/class.php';      # Общие классы
 require_once __DIR__.'/include/functions.php';  # Общие функции

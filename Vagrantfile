@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty32"
+  config.vm.box = "debian/contrib-stretch64"
 
   # Create a private network, which allows host-only access to the machine using a specific IP.
   config.vm.network "private_network", ip: "192.168.100.100"
@@ -16,7 +16,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # The second argument is the path on the guest to mount the folder.
   config.vm.synced_folder "./", "/var/www/bitrix-base"
 
+  # Название виртуальной машины, лучше указать название или домен проекта на eng
+  config.vm.define "LocDev"
+
   # Define the bootstrap file: A (shell) script that runs after first setup of your box (= provisioning)
   config.vm.provision :shell, path: "vagrant_stuff/bootstrap.sh"
-
+  config.vm.provision :shell, path: "vagrant_stuff/mysql.sh"
+  config.vm.provision :shell, path: "vagrant_stuff/php.sh"
+  config.vm.provision :shell, path: "vagrant_stuff/apache.sh"
 end
