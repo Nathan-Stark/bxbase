@@ -10,8 +10,7 @@
     }
   ],
   "require": {
-    "composer/installers":"~1",
-    "notamedia/console-jedi": "^1.2"
+    "composer/installers":"~1"
   },
   "extra": {
     "installer-paths": {
