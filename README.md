@@ -1,4 +1,9 @@
 # changelog
+
+### 0.5.1 ( 04 Апреля 2018)
+   - add: Добавлен [Console Jedi](https://github.com/notamedia/console-jedi)
+   - add: Добавлена быстрая установка bitrix
+
 ### 0.4.2 ( 10 Марта 2018)
    - fix: Исправлена установка стилей в отладчике.
    - add: Добавлен **documents\first_start**, рекомендации при развертывании нового проекта.  
