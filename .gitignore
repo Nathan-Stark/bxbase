@@ -1,12 +1,6 @@
 # bitrix file and folder to ignore
 # Добавить ключ лицензии в игнор
-web/bitrix/cache
-web/bitrix/managed_cache
-web/bitrix/.settings.php
-web/bitrix/php_interface/dbconn.php
-web/bitrix/stack_cache
-web/bitrix/backup
-web/bitrix/upload
+web/bitrix
 web/upload
 web/sitemap*
 web/bitrixsetup.php
