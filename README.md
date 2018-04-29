@@ -1,5 +1,10 @@
 # changelog
 
+### 0.6.2 ( 29 Апреля 2018)
+   - add: Добавлена быстрая установка bitrix
+   - update: Добавлена настройка для нормального именования виртуальной машниы.
+   - update: Обновлен .gitignore
+    
 ### 0.5.1 ( 04 Апреля 2018)
    - update: Полное обновление Vagrant
    - add: Добавлен [Console Jedi](https://github.com/notamedia/console-jedi)
