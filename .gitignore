@@ -1,5 +1,4 @@
 # bitrix file and folder to ignore
-# Добавить ключ лицензии в игнор
 web/bitrix
 web/upload
 web/sitemap*

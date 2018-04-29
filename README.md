@@ -1,8 +1,11 @@
 # changelog
 
+### 0.6.2 ( 29 Апреля 2018)
+   - update: Обновлен .gitignore
+    
 ### 0.5.1 ( 04 Апреля 2018)
+   - update: Полное обновление Vagrant
    - add: Добавлен [Console Jedi](https://github.com/notamedia/console-jedi)
-   - update: update: Обновлние .gitignore
    
 ### 0.4.2 ( 10 Марта 2018)
    - fix: Исправлена установка стилей в отладчике.
